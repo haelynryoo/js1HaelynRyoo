@@ -1,4 +1,7 @@
-djhafkbkjb
+reminders>
+
+
+
 make a repository (repo)
 push it to atom
 create a read me file
