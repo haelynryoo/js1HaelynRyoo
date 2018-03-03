@@ -9,4 +9,5 @@ reminders>
 5.save
 6.go to gitHub
 7.summery
-8.then commit 
+8.then commit
+9.then push the file 
