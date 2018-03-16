@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+  <style>
+  html{
+    background-image:
+    url(background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+  }
+  </style>
+
+
+</head>
+
+
+<body>
+
+
+</body>
+
+
+<script>
+//intro-------nd-----------------------------------------------------------------------
+money = 100;
+energy = 100;
+hunger = 100;
+incorrect = 0;
+petHappiness = 0;
+petXp = 0;
+
+alert("Welcome to the pet game")
+alert("This game was made by Haelyn and with help from Gucci")
+intro=prompt("Do you want to start?")
+intro=intro.toLowerCase()
+if(intro=="yes"||intro=="ya"||intro=="sure"||intro=="yeah"||intro=="ye"){
+  alert("amazing lets go!")
+  alert("You have just moved out and you have 100 coins (Coins are the currency)")
+  alert("Lucky for you!")
+  alert("You have a job as a shoe cleaner")
+  alert("You have a cute little house")
+  alert("Nice furniture")
+  alert("And enough money for food ")
+  alert("You really want a pet! And you are saving up for one.")
+  alert("However for the pet to be comfortable you need to get a bigger house, better furniture, a better job, and more money to buy pet food for it.")
+  alert("You also need to buy the pet better furniture and better food for it to be happy")
+  gender=prompt("Would you like to be a boy or a girl?")
+}
+if (gender=="girl"){
+  var img=document.createElement("IMG")
+  img.setAttribute("src","Girl.gif")
+  img.setAttribute("height","400")
+  document.body.appendChild(img)
+}
+else if (gender=="boy"){
+  var img=document.createElement("IMG")
+  img.setAttribute("src","Boy.gif")
+  img.setAttribute("height","400")
+  document.body.appendChild(img)
+}
+
+
+
+//functions and buttons
+
+function Job() {
+  job=prompt("Would you like to work? Answer yes down below if you want to work.")
+  job=job.toLowerCase();
+  if (job=="yes"){
+    alert("you have lost 10 energy and gained 10 coins and lost 20 hunger")
+    money = money + 10;
+    energy =energy - 10;
+    hunger=hunger - 20;
+    alert("you have " + money + " coins, " + energy + " energy and, " + hunger + " hunger in total")
+  }
+
+  else if (job=="no"||job=="No")
+  alert("ok you have " + money+ " coins, " + energy+ " energy and, " + hunger + " hunger.")
+}
+
+
+function Super_Market() {
+  SuperMarket=prompt("Would you like to go to the super market?")
+  SuperMarket=SuperMarket.toLowerCase();
+  if (SuperMarket=="yes"){
+    alert("you have lost 5 energy and lost 10 coins and gained 10 hunger")
+    money = money - 10;
+    energy = energy - 5;
+    hunger = hunger + 10;
+    alert("you have  " + money + "  coins, " + energy + " energy and, " + hunger + " hunger in total")
+
+
+  }
+
+}
+function Sleep() {
+  Sleep=prompt("Would you like to sleep?")
+  Sleep=Sleep.toLowerCase();
+  if (Sleep=="yes"){
+    alert("You have gained 10 energy")
+    energy= energy + 10;
+    alert("You have " + money + " coins, " + energy + " energy and, " + hunger + " hunger in total")
+  }
+  else if(Sleep=="no"){
+    alert("You have " + money + " coins, " + energy + " energy and, " + hunger + " hunger in total")
+  }
+}
+
+function petShop(){
+
+  pS=prompt("Would you like to go to the pet shop?")
+  if (pS=="yes"){
+    alert("Awesome! The pet store sells furniture, food and essentials")
+    store=prompt("What would you like you buy? furniture, food, or essentials")
+    if (store=="furniture"){
+      confirmation1=prompt("Are you sure you want to buy it? It costs 100 coins")
+      if (confirmation1=="yes"){
+        if(money>100){
+          alert ("ok you have gained pet happiness. You have gained 30 pet xp and your pet happiness level is  " + petHappiness)
+          alert("Your total coins are " + money + ".")
+
+          petXp = petXp + 30;
+          money = money - 100;
+          if (petXp=1000){
+            petHappiness++;
+          }
+        }
+        else{
+          alert("You do not have enough coins to buy this item")
+        }
+      }
+    }
+
+    if (store=="food"){
+
+      confirmation2=prompt("Are you sure you want to buy it? It costs 20 coins ")
+
+      if (confirmation2=="yes"){
+        if(money>20){
+          alert("ok you have gained pet happiness. you have gained 10 pet xp and your pet happiness level is " + petHappiness)
+          alert("Your total coins are " + money  + ".")
+
+          petXp = petXp + 10;
+          money = money - 20
+          if (petXp=1000){
+            petHappiness++;
+          }
+
+        }
+        else{
+          alert("You do not have enough coins to buy this item.")
+        }
+
+      }
+
+    }
+
+
+    if (store=="essentials"){
+
+      confirmation3=prompt("Are you sure you want to buy it? It costs 300 coins ")
+
+      if (confirmation3=="yes"){
+        if(money>300){
+          alert("ok you have gained pet happiness. you have gained 60 pet xp and your pet happiness level is " + petHappiness)
+          alert("Your total coins are " + money  + ".")
+
+
+          petXp = petXp + 60;
+          money = money - 300;
+          if (petXp=1000){
+            petHappiness++;
+          }
+        }
+        else{
+
+          alert("You do not have enough coins to buy this item.")
+        }
+
+      }
+    }
+
+  }
+
+
+}
+
+
+
+function buyPet(){
+  if(petHappiness>=10&& money>=1000){
+    buyPet=prompt("Are you ready to buy a pet? Answer yes below if you are ready to buy a pet")
+    if (buyPet== "yes"){
+      alert("than lets take the test")
+      alert("This will be multiple choice questions")
+      alert("if you get it correct you will get one point")
+      alert("your answer must be the lower case letter. For example if the correct answer is b than answer b")
+      alert("These questions will be about the game!")
+      alert("Question #1: much money do you get after working a shoe cleaner")
+      Q1=prompt("a. 20 coins! the shoes are smelly                                                   b. 5 coins! its a bad job                                                           c. 10 coins! At least i get money                                                   d. 50 coins! Its the best job EVER!")
+
+      Q1=Q1.toLowerCase();
+      if (Q1 == "c"){
+
+        alert("Awesome Job!")
+        correct=correct + 1;
+
+      }
+
+      else if (Q1 == "a" || Q1 == "b" || Q1 == "d") {
+
+        alert("Not that!")
+
+
+      }
+
+
+      alert("Next Question")
+      alert("How much money do you need to have to adopt a pet?")
+
+      Q2=prompt("a. 100! The pets are in need                                                        b. 10000000! Only rich people deserve pets!                                        c. 600! I dont know maybe they dont like the pets                                  d. 1000! The price is a test to see if the pet will get what it wants.")
+      Q2=Q2.toLowerCase
+
+      if (Q2=="d"){
+        alert("Amazing! You got it correct!")
+        correct=correct + 1
+
+      }
+
+      else if (Q2=="a" || Q2=="b" || Q2=="c"){
+        alert("Sorry! That is wrong")
+
+      }
+
+
+      alert("Next Question")
+      alert("Just Kidding! You have past the test! Was'nt that hard was it? ")
+      if(correct>=1){
+
+
+        end=prompt("Are you ready to adopt a pet?")
+        choosePet=prompt("Which pet would you like? the choices are dog, cat, hamster, or bunny?")
+        choosePet=choosePet.toLowerCase
+        if(choosePet==dog){
+          alert("awesome you have adopted a dog! You have completed the game!")
+        }
+        if(choosePet==cat){
+          alert("Great Job! You have adopted a cat and completed the game!")
+        }
+        if(choosePet==hamster){
+          alert("Great Job! You have adopted a hamster and completed the game!")
+        }
+        if(choosePet==bunny){
+          alert("awesome you have adopted a bunny! You have completed the game!")
+        }
+      }
+      else("Sorry you did not pass the test and cant adopt a pet! You can try again later.")
+
+
+
+
+      //Buy pet=="yes" (bracket)
+    }
+  }
+  else{
+    alert("Sorry your pet happiness or amount of coins is too low for you to adopt a pet!")
+  }
+}
+
+
+
+
+</script>
+
+<button onclick="petShop()">
+  <h1>
+    Pet Shop
+
+  </h1>
+
+
+</button>
+
+
+
+<button onclick="Job()">
+  <h1>    Job
+  </h1>
+</button>
+
+
+<button onclick="Super_Market()">
+  <h2>
+    Super Market
+
+  </h2>
+</button>
+
+
+<button onclick="Sleep()">
+  <h1>
+    Sleep
+  </h1>
+
+</button>
+
+<button onclick="buyPet()">
+  <h2>
+    adopt a pet
+  </h2>
+
+
+
+</button>
+
+
+
+
+
+</html>

@@ -1,0 +1,37 @@
+head{
+
+
+
+}
+
+body{
+  background-color: rgb(158, 195, 255);
+}
+
+h1{
+
+font-size: 40px;
+color: blue;
+font-family: 'Mina', sans-serif;
+font-style: italic;
+outline: 5px dotted green;
+
+}
+
+h2{
+
+font-size: 30px;
+color: rgb(61, 51, 206);
+font-family: sans-serif;
+font-style: italic;
+text-shadow: 2px 2px #22AF28;
+
+}
+
+p{
+
+font-size: 12px;
+color: black;
+ margin: 35px;
+padding: 35px;
+}

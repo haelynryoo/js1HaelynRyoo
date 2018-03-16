@@ -1,0 +1,26 @@
+
+
+
+
+
+
+h1{
+
+  color: green;
+  font-family: sans-serif;
+  background-color: pink;
+
+}
+
+h1.red {
+
+color: red;
+
+}
+
+h1.blue {
+
+color: blue;
+background-color: yellow;
+
+}
