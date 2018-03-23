@@ -8,7 +8,7 @@ body{
   background-color: rgb(158, 195, 255);
 }
 
-h1{
+div{
 
 font-size: 40px;
 color: blue;
@@ -16,7 +16,19 @@ font-family: 'Mina', sans-serif;
 font-style: italic;
 outline: 5px dotted green;
 
+
+
+
+
+
 }
+div.hover{
+
+font-size: 50px;
+
+}
+
+
 
 h2{
 
